@@ -101,10 +101,19 @@ body {
 }
 
 .about {
-  padding: 3rem 5rem;
+  padding: 0rem 5rem 2rem;
   background-color: #f4f5f0;
-  width: 75%;
+  width: 70%;
   margin: auto;
+}
+.sidebar {
+  background-color: #f4f5f0;
+  width: 80%;
+  margin: 0 0 40px;
+  font-size: 14px;
+  border: 4px double #9BDBE2;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .profile-img {
@@ -133,7 +142,7 @@ body {
 .section-heading {
   font-family: "Dancing Script", cursive;
   text-align: center;
-  color: #7e87d3;
+  color: #D79ED0;
   font-size: 6rem;
   font-weight: 800;
   letter-spacing: 4px;
@@ -144,13 +153,13 @@ body {
 }
 
 .padding-bottom--small {
-  padding-bottom: 2.5rem;
+  padding-bottom: 5rem;
 }
 
 .main-section {
     padding: 3rem 5rem;
     display: flex;
-    background-color: #7e87d3;
+  /* background-color: #7e87d3; */
     justify-content: center;
     margin: 0 3rem;
    
@@ -171,31 +180,174 @@ body {
     
 }
 
-.skills{
-    background-color: #f4f5f0;
-}
-
-.education {
-    background-color: #D79ED0;
-}
 .clearfix::after {
     content: "";
     clear: both;
     display: table;
   }
 
-  h2 {
+h2 {
       font-size: 3rem;
-  }
+}
 
-  .footer {
+.footer {
       height: 5rem;
-      
+      background-color: #9BDBE2;
       margin: 0 3rem;
       
   }
 
+  main {
+
+    display: flex;
+    padding: 5rem 3rem;
+    
+  }
+
+  .first-section {
+
+    display: flex;
+    width: 70%;
+    
+
+  }
+
+  .second-section {
+
+    display: flex;
+    width: 30%;
+   
+  }
+
+  .navigation{
+    height: 5rem;
+    background-color: bisque;
+  }
+
+  .skill-bars{
+    padding: 25px 30px;
+    width: 90%;
+    background: #f4f5f0;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    margin: 5rem auto;
+
+  }
+  .skill-bars .bar{
+    margin: 20px 0;
+  }
+  .skill-bars .bar:first-child{
+    margin-top: 0px;
+  }
+  .skill-bars .bar .info{
+    margin-bottom: 5px;
+  }
+  .skill-bars .bar .info span{
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+  }
+  @keyframes showText {
+    100%{
+      opacity: 1;
+    }
+  }
+  .skill-bars .bar .progress-line{
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+                0 1px rgba(255,255,255,0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+  }
+  @keyframes animate {
+    100%{
+      transform: scaleX(1);
+    }
+  }
+  .bar .progress-line span{
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #6665ee;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+  }
+  .bar .progress-line.html span{
+    width: 90%;
+  }
+  .bar .progress-line.css span{
+    width: 60%;
+  }
+  .bar .progress-line.javascript span{
+    width: 85%;
+  }
+  .bar .progress-line.python span{
+    width: 50%;
+  }
+  .bar .progress-line.mysql span{
+    width: 75%;
+  }
+  .progress-line span::before{
+    position: absolute;
+    content: "";
+    top: -10px;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+  }
+  .progress-line span::after{
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-weight: 500;
+    background: #000;
+    color: #fff;
+    padding: 1px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+  }
+  @keyframes showText2 {
+    100%{
+      opacity: 1;
+    }
+  }
+  .progress-line.html span::after{
+    content: "90%";
+  }
+  .progress-line.css span::after{
+    content: "60%";
+  }
+  .progress-line.javascript span::after{
+    content: "85%";
+  }
+  .progress-line.python span::after{
+    content: "50%";
+  }
+  .progress-line.mysql span::after{
+    content: "75%";
+  }
+  
+
   @media (max-width: 700px) {
+
+    main {
+      flex-direction: column;
+    }
     .about {
       display: flex;
       flex-direction: column;
@@ -203,6 +355,13 @@ body {
     .main-section {
       flex-direction: column;
       align-items: center;
+    }
+    .first-section{
+      width: 100%;
+    }
+    .second-section {
+      width: 100%;
+
     }
     .circle {
         margin: 2rem 0;
