@@ -242,7 +242,7 @@ body {
   .bar .progress-line.css span{
     width: 60%;
   }
-  .bar .progress-line.jquery span{
+  .bar .progress-line.javascript span{
     width: 85%;
   }
   .bar .progress-line.python span{
@@ -289,7 +289,7 @@ body {
   .progress-line.css span::after{
     content: "60%";
   }
-  .progress-line.jquery span::after{
+  .progress-line.javascript span::after{
     content: "85%";
   }
   .progress-line.python span::after{
@@ -314,6 +314,17 @@ body {
     font-size: 2rem;
   }
 
+hr{
+  margin: 0 10rem;
+}
+
+a {
+  text-decoration: none;
+  color:white;
+}
+a:visited {
+  color: white;
+}
   
 
   @media (max-width: 700px) {
