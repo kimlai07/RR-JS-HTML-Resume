@@ -316,6 +316,7 @@ body {
 
 hr{
   margin: 0 10rem;
+  background-color: white;
 }
 
 a {
@@ -325,7 +326,68 @@ a {
 a:visited {
   color: white;
 }
+
+.contact_me {
+ 
   
+  padding: 5rem;
+  
+}
+
+.contact {
+  margin: auto;
+  padding: 5rem 20rem;
+  background-image: linear-gradient(
+      to right,
+      rgba(155, 218, 226, 0.4),
+      rgba(155, 218, 226, 0.4)
+    ),
+    url("sunset.jpg");
+
+    background-image: linear-gradient(
+      to right,
+      rgba(0,0 ,0,0.4),
+      rgba(0,0,0, 0.4)
+    ),
+    url("sunset.jpg");
+
+  background-position: center bottom;
+  background-size: cover;
+  margin: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size:2rem;
+}
+.contact  * {
+  font-size: inherit;
+}
+
+.font {
+  font-size: 1.5rem;
+}
+
+.button {
+  background-color: #5f1cf2;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+
+}
+.phone label {
+  margin:0;
+  padding-right: 2rem;
+  padding-left: .5rem;
+}
+
+.form-color{
+  color: white;
+}
 
   @media (max-width: 700px) {
     .about {
