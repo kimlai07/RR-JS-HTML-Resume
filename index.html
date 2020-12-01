@@ -128,10 +128,10 @@
                               <input type="tel" class="form-control" id="phone_number" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required>
                       </div>
                       <div class="form-check mb-2 mr-sm-2 phone">
-                          <input type="radio" name="phone_type">
-                          <label for="phone_type" class="form-color">Mobile</label>
-                          <input type="radio" name="phone_type">
-                          <label for="phone_type" class="form-color">Landline</label>
+                          <input type="radio" name="phone_type" id="mobile">
+                          <label for="mobile" class="form-color">Mobile</label>
+                          <input type="radio" name="phone_type" id="landline">
+                          <label for="landline" class="form-color">Landline</label>
                       </div>
                       <div class="input-group mb-3 mt-3 mb-2 mr-sm-2">
                           <div class="input-group-prepend">
@@ -145,25 +145,25 @@
                       <div class="input-group-prepend">
                           <label for="source" class="input-group-text">How did you hear about us?</label>
                       </div>
-                      <select id="source" name="source" class="custom-select">
+                      <select id="source" name="source  " class="custom-select">
                           <option selected>Please select</option>
                           <option value="search_engine">Search Engine</option>
                           <option value="social_media">Social Media</option>
                           <option value="recruiter">Recruiter</option>
                       </select>
                   </div>
-                  <div class="form-check mb-2 mr-sm-2 phone">
+                  <div class="form-group mb-2 mr-sm-2 phone">
                     <label for="exampleFormControlTextarea1" class="form-color">Interest for contacting</label>
                     
                       <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" id="html" name="html" class="custom-control-input" value="html">
-                        <label class="custom-control-label form-color" for="html">HTML</label>
+                        <input type="checkbox" id="html" name="html" class="form-check-input" value="html">
+                        <label class="form-check-label form-color" for="html">HTML</label>
                       
-                        <input type="checkbox" id="css" name="css" class="custom-control-input" value="css">
-                        <label class="custom-control-label form-color" for="css">CSS</label>
+                        <input type="checkbox" id="css" name="css" class="form-check-input" value="css">
+                        <label class="form-check-label form-color" for="css">CSS</label>
                       
-                        <input type="checkbox" id="javascript" name="javascript" class="custom-control-input" value="javascript">
-                        <label class="custom-control-label form-color" for="javascript">JavaScript</label>
+                        <input type="checkbox" id="javascript" name="javascript" class="form-check-input" value="javascript">
+                        <label class="form-check-label form-color" for="javascript">JavaScript</label>
                       </div>
                   </div>
               </div>
